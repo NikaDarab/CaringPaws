@@ -42,10 +42,10 @@
 	   <li class="nav-item">
         <a class="nav-link" href="#services">SERVICES</a>
       </li><li class="nav-item">
-        <a class="nav-link" href="/Software_Eng_Project1/login.jsp">REGISTER</a>
+        <a class="nav-link" href="login">REGISTER</a>
       </li>
         <li class="nav-item">
-        <a class="nav-link" href="#login">LOGIN</a>
+        <a class="nav-link" href="login">LOGIN</a>
       </li>
     </ul>
   </div>
