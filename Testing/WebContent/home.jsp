@@ -14,6 +14,12 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
+
+<style>
+	a {
+		margin-top: 20px !important;
+	}
+</style>
 <body>
 <!-----NavigationBar---->
 <section id="nav-bar">
@@ -24,6 +30,11 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="/Testing">
+	        <img style="height: 60px; width: 100px; margin-top: 15px; margin-right: 20px;" src="http://liam.mcmains.net/logo.png" />      	
+      	</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="#contact">CONTACT</a>
       </li>
