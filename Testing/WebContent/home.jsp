@@ -14,54 +14,9 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
-
-<style>
-	a {
-		margin-top: 20px !important;
-	}
-</style>
 <body>
 <!-----NavigationBar---->
-<section id="nav-bar">
- <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a href="/Testing">
-	        <img style="height: 60px; width: 100px; margin-top: 15px; margin-right: 20px;" src="http://liam.mcmains.net/logo.png" />      	
-      	</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact">CONTACT</a>
-      </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="#ourteam">OUR TEAM</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#reviews">REVIEWS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#care providers">CARE PROVIDERS</a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#pets">PETS</a>
-      </li>
-	   <li class="nav-item">
-        <a class="nav-link" href="#services">SERVICES</a>
-      </li><li class="nav-item">
-        <a class="nav-link" href="login">REGISTER</a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="login">LOGIN</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-</section>
+ <%@include file="navbar.jsp" %>
 	<!-------Slider------->
 <div id="slider">
 <div id="headerSlider" class="carousel slide" data-ride="carousel">
