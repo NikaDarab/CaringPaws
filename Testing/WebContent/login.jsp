@@ -22,9 +22,13 @@
 		}
 		
 		.alert {
-		margin: 15px auto;
-		max-width: 900px;
-	}
+			margin: 15px auto;
+			max-width: 900px;
+		}
+		
+		.btn-primary {
+			background-color: rgb(246, 3, 101);
+		}
 	</style>
 </head>
 <body style="background-color: #eee">

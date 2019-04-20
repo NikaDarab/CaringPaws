@@ -29,8 +29,11 @@ public class HomeController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");         
+		boolean shouldSignOut = Boolean.parseBoolean(request.getParameter("signOut"));
 		
-		System.out.println(UserManager.getInstance().getUsername());
+		if(shouldSignOut) {
+			UserManager.signOut();
+		}
         
 		request.getRequestDispatcher("home.jsp").forward(request, response);
 	}

@@ -16,4 +16,8 @@ public class UserManager {
 		
 		return customer;
 	}
+	
+	public static void signOut() {
+		UserManager.customer = null;
+	}
 }

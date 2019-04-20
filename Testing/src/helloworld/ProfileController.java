@@ -39,9 +39,7 @@ public class ProfileController extends HttpServlet {
 		
 		if(UserManager.getInstance().getUsername() != null) {
 			request.setAttribute("user", UserManager.getInstance());
-//			request.setAttribute("pets", manager.getPets(UserManager.getInstance().getUsername()));
-			ArrayList<Pet> pets = (ArrayList<Pet>) manager.getPets(UserManager.getInstance().getUsername());
-			pets.forEach(System.out::println);
+			request.setAttribute("pets", manager.getPets(UserManager.getInstance().getUsername()));
 			request.getRequestDispatcher("profile.jsp").forward(request, response);
 		} else {
 			request.setAttribute("errorMes", "You have to be logged in to do that!");

@@ -1,3 +1,25 @@
 .mainContainer {
-	margin: 20px 65px;
+	margin: 40px 65px;
+}
+
+body {
+	background-color: #eee;
+}
+
+.sitterResult {
+	max-width: 900px;
+	background-color: white;
+	margin-bottom: 20px;
+	padding: 15px 40px;
+	border-radius: 10px;
+}
+
+a {
+	color: rgb(246, 3, 101); 
+}
+
+.btn-primary {
+	background-color: rgb(246, 3, 101);
+	padding: 15px;
+	margin: 23px 40px;
 }
