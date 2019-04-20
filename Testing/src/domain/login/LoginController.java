@@ -7,18 +7,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Customer;
+import model.Login;
+
 @WebServlet("/LoginController")
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 
-    public LoginController() {}
+    public LoginController() {
+    	super();
+    }
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");         
-        
-		request.getRequestDispatcher("login.jsp").forward(request, response);
+		response.setContentType("text/html"); 
+		
+		if(UserManager.getInstance().getUsername() == null) {
+			request.getRequestDispatcher("login.jsp").forward(request, response);
+		} else {
+			request.setAttribute("message", "You are already logged in!");
+			request.getRequestDispatcher("home.jsp").forward(request, response);
+		}
 	}
     
 	@Override
@@ -44,9 +54,8 @@ public class LoginController extends HttpServlet {
 		System.out.println("========================");
 		
 		if(submitType.equals("login") && c != null && c.getUsername() != null) {
-			request.setAttribute("message", "Hello "+c.getName());
+			UserManager.setCustomer(c);
 			request.getRequestDispatcher("home.jsp").forward(request, response);
-			
 		} else if(submitType.equals("register")) {
 			c.setName(request.getParameter("name"));
 			c.setUsername(request.getParameter("username"));
@@ -56,7 +65,8 @@ public class LoginController extends HttpServlet {
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 			
 		} else {
-			request.setAttribute("message", "Data Not Found! Please register!");
+			System.out.println("USER NOT FOUND");
+			request.setAttribute("error", "Data Not Found! Please register!");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 

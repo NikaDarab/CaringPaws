@@ -17,6 +17,7 @@ CREATE TABLE `customers` (
 
 CREATE TABLE `sitters` (
 	`averageRating` DOUBLE NOT NULL,
+	`name` VARCHAT(100) NOT NULL,
 	`email` VARCHAR(100) NOT NULL,
 	`phoneNumber` VARCHAR(100) NOT NULL,
 	`zipCode` VARCHAR(100) NOT NULL,
@@ -50,13 +51,12 @@ CREATE TABLE `pets` (
 	`breed` VARCHAR(100) NOT NULL,
 	`species` VARCHAR(100),
 	`birthday` VARCHAR(100) NOT NULL,
-	`photo` BLOB(1000),
 	`approximateWeightInPounds` INT(8),
 	`primaryColor` VARCHAR(100),
 	`nature` VARCHAR(100),
 	`isSpayedAndNeutered` BOOLEAN,
 	`id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	`ownerID` int
+	`ownerID` VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE `paymentTypes` (

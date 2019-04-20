@@ -19,49 +19,37 @@
 	a {
 		margin-top: 20px !important;
 	}
+	
+	.carousel.slide {
+		max-height: 600px;
+		overflow: hidden;
+	}
+	
+	.carousel-inner {
+		max-height: 600px;
+	}
+	
+	.alert {
+		margin: 15px auto;
+		max-width: 900px;
+	}
+	
 </style>
 <body>
 <!-----NavigationBar---->
 <section id="nav-bar">
- <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a href="/Testing">
-	        <img style="height: 60px; width: 100px; margin-top: 15px; margin-right: 20px;" src="http://liam.mcmains.net/logo.png" />      	
-      	</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact">CONTACT</a>
-      </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="#ourteam">OUR TEAM</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#reviews">REVIEWS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#care providers">CARE PROVIDERS</a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#pets">PETS</a>
-      </li>
-	   <li class="nav-item">
-        <a class="nav-link" href="#services">SERVICES</a>
-      </li><li class="nav-item">
-        <a class="nav-link" href="login">REGISTER</a>
-      </li>
-        <li class="nav-item">
-        <a class="nav-link" href="login">LOGIN</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+	<%@include file="navbar.jsp" %>
 </section>
+
+<%
+	if(request.getAttribute("message") != null && request.getAttribute("message") != "") {
+		%>
+			<div class="alert alert-success" role="alert">
+			  You are already logged in!
+			</div>
+		<%
+	}
+%>
 	<!-------Slider------->
 <div id="slider">
 <div id="headerSlider" class="carousel slide" data-ride="carousel">
@@ -118,42 +106,31 @@
   </a>
 </div>
 </div>
-	  <!--------services------->
-    <section id="services">
-<div class="container text-center">
-<h1 class="title">Services</h1>
-<div class="row text-center">
-<div class="col-md-4 services">
-<h4>Pet Sitting</h4>
-<p>We provide a platform for pet owners to find qualified sitters! </p>
-</div>
-</div>
-</div>
-</section>
-	<!--------Reveiws-------->
+
+<!--------Reveiws-------->
 <section id="reviews">
 <div class="container">
 <h1>Reviews</h1>
-<p class="text-center">Reviews</p>
 <div class="row">
  <div class="col-md-4 text-center">
     <div class="profile">
-    <p>Great services.</p>
-        <h3>User 1 <span>Pet owner</span></h3>
+    
+    <h3>Stacy Anderson</h3>
+    <p>I can't believe how easy it was! My dog loved it and I had a great time at the bar with my friends.</p>
     </div>
  </div>
     <div class="col-md-4 text-center">
     <div class="profile">
-
-    <p>Great job opportunity..</p>
-        <h3>User 2 <span>Care provider</span></h3>
+    
+	<h3>Oliver Twist</span></h3>
+    <p>I left my parakeet with the thoughtful hands at Caring Paws so I could get a haircut. They fed him, played with him, and taught him how to juggle. Great service! </p>
     </div>
  </div>
     <div class="col-md-4 text-center">
     <div class="profile">
-
-    <p>Reliable service.</p>
-        <h3>User 3<span>Pet owner</span></h3>
+    
+	<h3>Daenerys Targaryen</span></h3>
+    <p>I have a few pets dragons that are normally really hard to handle. However, Caring Paws made it easy to leave them alone for a weekend while I went to Winterfell. Really appreciate their service.</p>
     </div>
  </div>
 </div>
@@ -167,87 +144,65 @@
 <div class="container">
     <h1>Our Team</h1>
     <div class="row">
-    <div class="col-md-3 profile-pic text-center">
-    <div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Small-city-symbol.svg"
+    <div class="col-md-4 profile-pic text-center">
+    <div class="img-box"><img style="margin-top: 15px; margin-left: 100px; border-radius: 50%; overflow: hidden; max-height: 150px; max-width: 150px;" src="katy.jpg"
 	class="img-responsive">
     <ul>
-    <a href="#"><li><i class="fa fa-facebook"></i></li></a>
-    <a href="#"><li><i class="fa fa-twitter"></i></li></a>
-    <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
     </ul>
     </div>
-        <h2>Katie</h2>
+        <h2>Katy</h2>
         <h3>Member</h3>
-        <p>Katie bio</p>
     </div>
-        <div class="col-md-3 profile-pic text-center">
+        <div class="col-md-4 profile-pic text-center">
     <div class="img-box">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Small-city-symbol.svg"
+    <img style="margin-top: 15px; margin-left: 100px; border-radius: 50%; overflow: hidden; max-height: 150px; max-width: 150px;" src="https://miro.medium.com/max/2400/1*rjVZ7GdF0e2ScXIJC3NFIg.jpeg"
 	class="img-responsive">
     <ul>
-    <a href="#"><li><i class="fa fa-facebook"></i></li></a>
-    <a href="#"><li><i class="fa fa-twitter"></i></li></a>
-    <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
     </ul>
     </div>
         <h2>Liam</h2>
         <h3>Member</h3>
-        <p>Liam bio</p>
     </div>
-        <div class="col-md-3 profile-pic text-center">
+    <div class="col-md-4 profile-pic text-center">
     <div class="img-box">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Small-city-symbol.svg"
+    <img src="ashley.jpg" style="margin-top: 15px; margin-left: 100px; border-radius: 50%; overflow: hidden; max-height: 150px; max-width: 150px;"
 	class="img-responsive">
     <ul>
-    <a href="#"><li><i class="fa fa-facebook"></i></li></a>
-    <a href="#"><li><i class="fa fa-twitter"></i></li></a>
-    <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
     </ul>
     </div>
         <h2>Ashley</h2>
         <h3>Member</h3>
-        <p>Ashley Bio</p>
     </div>
-        <div class="col-md-3 profile-pic text-center">
+        <div class="col-md-4 profile-pic text-center">
     <div class="img-box">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Small-city-symbol.svg"
-	class="img-responsive">
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzlZJCihMUZZq1TcVQDE-6OuPqeydKalr1CRFneYUGr-R0zWJ3"
+	class="img-responsive"
+	style="margin-top: 15px; margin-left: 100px; border-radius: 50%; overflow: hidden; width: 150px; height: 150px; max-height: 150px; max-width: 150px;">
     <ul>
-    <a href="#"><li><i class="fa fa-facebook"></i></li></a>
-    <a href="#"><li><i class="fa fa-twitter"></i></li></a>
-    <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
     </ul>
     </div>
         <h2>Manav</h2>
         <h3>Member</h3>
-        <p>Manav Bio</p>
     </div>
-	 <div class="col-md-3 profile-pic text-center">
+	<div class="col-md-4 profile-pic text-center">
     <div class="img-box">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Small-city-symbol.svg"
-	class="img-responsive">
+    <img src="https://i.groupme.com/1024x1023.jpeg.7b1d7a9479c84e709513e72319045c15"
+	class="img-responsive"
+	style="margin-top: 15px; margin-left: 100px; border-radius: 50%; overflow: hidden; width: 150px; height: 150px; max-height: 150px; max-width: 150px;">
     <ul>
-    <a href="#"><li><i class="fa fa-facebook"></i></li></a>
-    <a href="#"><li><i class="fa fa-twitter"></i></li></a>
-    <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
     </ul>
     </div>
-        <h2>Paul</h2>
-        <h3>Member</h3>
-        <p>Paul bio</p>
+    <h2 style="margin-left: 0px;">Paul</h2>
+    <h3>Member</h3>
     </div>
-	<div class="col-md-3 profile-pic text-center">
-    <div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Small-city-symbol.svg"
+	<div class="col-md-4 profile-pic text-center">
+    <div class="img-box"><img style="margin-top: 15px; margin-left: 100px; border-radius: 50%; overflow: hidden; max-height: 150px; max-width: 150px;" src="https://yt3.ggpht.com/a-/ACSszfGwROECgWzzFpNNu2HuWZooxEhU673uZE9T8w=s900-mo-c-c0xffffffff-rj-k-no"
 	class="img-responsive">
     <ul>
-    <a href="#"><li><i class="fa fa-facebook"></i></li></a>
-    <a href="#"><li><i class="fa fa-twitter"></i></li></a>
-    <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
     </ul>
     </div>
         <h2>Nika</h2>
         <h3>Member</h3>
-        <p>Nika bio</p>
     </div>
     </div>
 </div>

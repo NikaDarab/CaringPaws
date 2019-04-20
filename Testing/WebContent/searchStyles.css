@@ -1,0 +1,28 @@
+.mainContainer {
+	padding: 65px;
+	padding-top: 20px;
+}
+
+.submitButton {
+	margin-top: 15px !important;
+}
+
+.sitterResult {
+	padding: 30px;
+	border-radius: 10px;
+	background-color: #fff;
+	padding-top: 5px;
+	margin-top: 30px;
+}
+
+h3 {
+	margin-top: 0px !important;
+}
+
+p {
+	margin-left: 15px;
+}
+
+body {
+	background-color: #eee;
+}
