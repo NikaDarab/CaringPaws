@@ -36,6 +36,27 @@
 	
 </head>
 <body>
+
+<%
+	if(request.getAttribute("success") != null && request.getAttribute("message") != "") {
+		%>
+			<div class="alert alert-success" role="alert">
+			  Successfully added pet to your account.
+			</div>
+		<%
+	}
+%>
+
+<%
+	if(request.getAttribute("error") != null && request.getAttribute("message") != "") {
+		%>
+			<div class="alert alert-danger" role="alert">
+			  An error occured while adding your pet to your account. Please try again.
+			</div>
+		<%
+	}
+%>
+
 	<section id="nav-bar">
 		<%@include file="navbar.jsp" %>
 	</section>

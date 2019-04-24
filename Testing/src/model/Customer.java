@@ -9,6 +9,8 @@ public class Customer {
 	private String username;
 	private String password;
 	private String name;
+	private int id;
+	
 	public String getUsername() {
 		return username;
 	}
@@ -26,6 +28,12 @@ public class Customer {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public void setID(int id) {
+		this.id = id;
+	}
+	public int getID() {
+		return this.id;
 	}
 
 	

@@ -11,7 +11,7 @@ public class Sitter {
 	private int ID;
 	private String name;
 	
-	public Sitter(double averageRating, String email, String phone, int zip, String pass, String birth, String personalDesc, int id, String name) {
+	public Sitter(double averageRating, String name, String email, String phone, int zip, String pass, String birth, String personalDesc, int id) {
 		this.averageRating = averageRating;
 		this.email = email;
 		this.phoneNumber = phone;

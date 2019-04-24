@@ -14,23 +14,17 @@
 	<%@include file="navbar.jsp" %>
 	
 	<div class="mainContainer">
-		<h1>${user.username}'s Profile</h1>
+		<h1>${user.username}'s Reservations</h1>
 		
 		<div style="padding-left: 20px;">
-			<h2 style="margin-bottom: 20px;">Pets</h2>
-			<c:forEach items="${pets}" var="pet">
-				<div style="padding-left: 15px;">
-			   		<div class="sitterResult">
-			   			<a href="/Testing/ProfileController">
-			   				<h3>${pet.name}</h3>
-			   			</a>
-			   			<p>${pet.type}: ${pet.breed}</p>
-			   			<p>Weight: ${pet.weight}lb</p>
-			   			<p>Color: ${pet.color}</p>
-			   			<p>Spayed: ${pet.spayOrNeuter}</p>
-			   			<p>Nature: ${pet.nature}</p>
-			   			<%-- <p>Date of Birth: ${pet.dob}</p> --%>
-			        </div>
+			<h2 style="margin-bottom: 20px;">Reservations</h2>
+			<c:forEach items="${reservations}" var="res">
+				<div style="background-color: white; border-radius: 20px; padding: 20px 40px; margin: 20px 0px;">
+					<a href="/Testing/ProfileController">
+						<h2>Pet: ${res.petName}</h1>
+					</a>
+					
+					<h4 style="margin-bottom: 20px;">Reservation Date: ${res.date}</h2>
 				</div>
 		     </c:forEach>
 		</div>

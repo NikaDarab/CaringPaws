@@ -28,6 +28,15 @@
 </section>
 
 <div class="mainContainer">
+<%
+	if(request.getAttribute("noSitters") != null && request.getAttribute("message") != "") {
+		%>
+			<div class="alert alert-danger" role="alert">
+			  No sitters found. Please broaden your search criteria.
+			</div>
+		<%
+	}
+%>
 	<h1> Search our Sitters! </h1>
 	
 	<form action="SearchSitters" method="POST" >
@@ -37,8 +46,8 @@
 	      <input id="name" name="name" type="text" class="form-control" placeholder="Name...">
 	    </div>
 	    <div class="col">
-	   	  <label for="date">Availability Date</label>
-	      <input id="date" type="date" name="date" class="form-control" placeholder="Date">
+	   	  <label for="date">Location</label>
+	      <input id="date" type="number" name="zipCode" class="form-control" placeholder="Zip Code...">
 	    </div>
 	    <div class="col">
 	   	  <label for="rating">Minimum Rating</label>
@@ -50,7 +59,7 @@
 	
      <c:forEach items="${sitters}" var="sitter">
      		<div class="sitterResult">
-     			<a href="/Testing/Sitter/id?=${sitter.ID}">
+     			<a href="/Testing/Sitter?id=${sitter.ID}">
 	         		<h1>${sitter.name}</h1>
 	         	</a>
 	         	<h3>${sitter.averageRating} / 5 Stars</h3>

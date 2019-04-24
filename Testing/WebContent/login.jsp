@@ -62,17 +62,13 @@
 	<h1 style="margin-bottom: 25px;">Register / Login</h1>
 	
 	<form action="/Testing/LoginController" method="post" style="max-width: 500px !important;">
-	    <div class="form-group">
-		  <label for="name">What is your name?</label>
-		  <input class="form-control" name="name" id="nameID" placeholder="Name..." />
-	    </div>
 		<div class="form-group">
 		    <label for="username">What is your user name?</label>
 		    <input class="form-control" name="username" id="usernameID" placeholder="Username..." />
 		</div>
 		<div class="form-group">
 		  <label for="password">What is your password</label>
-		  <input class="form-control" name="password" id="passwordID" placeholder="Password..." />
+		  <input class="form-control" type="password" name="password" id="passwordID" placeholder="Password..." />
 	    </div>
 		<div class="form-group" style="padding-top: 20px;">
 		  <button class="btn btn-primary" type="submit" name="submit" value="login">Login</button>

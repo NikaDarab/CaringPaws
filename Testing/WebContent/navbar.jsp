@@ -28,6 +28,10 @@
         <li class="nav-item" style="margin-top: 0px; margin-right: 15px;">
         <a class="nav-link" href="/Testing/LoginController">LOGIN</a>
       </li>
+      </li>
+        <li class="nav-item" style="margin-top: 0px; margin-right: 15px;">
+        <a class="nav-link" href="/Testing/Reservations">RESERVATIONS</a>
+      </li>
       <li>
         <li class="nav-item" style="margin-top: 0px">
         <a class="nav-link" href="/Testing/ProfileController">PROFILE</a>

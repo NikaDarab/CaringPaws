@@ -1,26 +1,31 @@
 package helloworld;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import db.DbManager;
 import domain.login.UserManager;
-import model.Pet;
+import model.Reservation;
+import model.Review;
+import model.Sitter;
 
 /**
- * Servlet implementation class AddPetPage
+ * Servlet implementation class ReservationsController
  */
-@WebServlet("/AddPetPage")
-public class AddPetController extends HttpServlet {
+@WebServlet("/Reservations")
+public class ReservationsController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddPetController() {
+    public ReservationsController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,36 +38,26 @@ public class AddPetController extends HttpServlet {
 		response.setContentType("text/html");         
         
 		if(UserManager.getInstance().getUsername() != null) {
-			request.getRequestDispatcher("addPet.jsp").forward(request, response);
+			DbManager manager = new DbManager();
+			List<Reservation> reservations = manager.getReservations(UserManager.getInstance().getUsername());
+			
+			System.out.println("Length: " + reservations.size());
+	        
+			request.setAttribute("reservations", reservations);
+			request.setAttribute("user", UserManager.getInstance());
+			request.getRequestDispatcher("activeReservations.jsp").forward(request, response);
 		} else {
 			request.setAttribute("errorMes", "You have to be logged in to do that!");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 	}
 
-	
-	// POST
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String petName = request.getParameter("petName");
-		String type = request.getParameter("type");
-		String breed = request.getParameter("breed");
-		String DOB = request.getParameter("birthday");
-		int weight = Integer.parseInt(request.getParameter("weight"));
-		String color = request.getParameter("color");
-		boolean spayedOrNeutered = Boolean.parseBoolean(request.getParameter("spay"));
-		String nature = request.getParameter("nature");
-		
-		Pet newPet = new Pet(petName, type, breed, DOB, weight, color, nature, spayedOrNeutered, 0, UserManager.getInstance().getUsername());
-		
-		PetFormToSQL formToSQL = new PetFormToSQL();
-		int status = formToSQL.sendFormToSQL(newPet);
-		
-		System.out.println(status);
-		
-		request.setAttribute(status == 1 ? "success" : "error", "message");
-		
-		this.doGet(request, response);			
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
-
 
 }
