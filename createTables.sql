@@ -156,7 +156,7 @@ insert into sitters values (
 );
 
 insert into sitters values (
-	4.5,
+	0,
 	"Michael Brown",
 	"MikeyMike@msn.com",
 	"512-878-2964",

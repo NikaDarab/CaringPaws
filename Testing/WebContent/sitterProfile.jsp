@@ -54,7 +54,7 @@
 		<div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; background-color: white">
 			<form action="/Testing/BookSitter" method="GET">
 				<input id="prodId" name="id" type="hidden" value="${sitter.ID}">	
-				<button class="btn btn-primary">Book Sitter</button>
+				<button id="submit" class="btn btn-primary">Book Sitter</button>
 			</form>
 		</div>
 		

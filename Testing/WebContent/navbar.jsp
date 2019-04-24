@@ -11,30 +11,30 @@
       	</a>
       </li>
       <li class="nav-item" style="margin-top: 0px; margin-right: 15px;">
-        <a class="nav-link" href="/Testing/SearchSitters">SEARCH SITTERS</a>
+        <a id="navSearch" class="nav-link" href="/Testing/SearchSitters">SEARCH SITTERS</a>
       </li>
 	  <li class="nav-item" style="margin-top: 0px; margin-right: 15px;">
-        <a class="nav-link" href="/Testing/Home#ourteam">OUR TEAM</a>
+        <a id="navOurTeam" class="nav-link" href="/Testing/Home#ourteam">OUR TEAM</a>
       </li>
       <li class="nav-item" style="margin-top: 0px; margin-right: 15px;">
-        <a class="nav-link" href="/Testing/AddPetPage">ADD YOUR PETS</a>
+        <a id="navAddPet" class="nav-link" href="/Testing/AddPetPage">ADD YOUR PETS</a>
       </li>
 	  <li class="nav-item" style="margin-top: 0px; margin-right: 15px;">
-        <a class="nav-link" href="/Testing/Home#contact">CONTACT</a>
+        <a id="navContact" class="nav-link" href="/Testing/Home#contact">CONTACT</a>
       </li>
       <li class="nav-item" style="margin-top: 0px; margin-right: 15px;">
-        <a class="nav-link" href="/Testing/LoginController">REGISTER</a>
+        <a id="navRegister" class="nav-link" href="/Testing/LoginController">REGISTER</a>
       </li>
         <li class="nav-item" style="margin-top: 0px; margin-right: 15px;">
-        <a class="nav-link" href="/Testing/LoginController">LOGIN</a>
+        <a id="navLogin" class="nav-link" href="/Testing/LoginController">LOGIN</a>
       </li>
       </li>
         <li class="nav-item" style="margin-top: 0px; margin-right: 15px;">
-        <a class="nav-link" href="/Testing/Reservations">RESERVATIONS</a>
+        <a id="navReservations" class="nav-link" href="/Testing/Reservations">RESERVATIONS</a>
       </li>
       <li>
         <li class="nav-item" style="margin-top: 0px">
-        <a class="nav-link" href="/Testing/ProfileController">PROFILE</a>
+        <a id="navProfile" class="nav-link" href="/Testing/ProfileController">PROFILE</a>
       </li>
     </ul>
   </div>

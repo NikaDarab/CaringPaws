@@ -47,19 +47,19 @@
 	    </div>
 	    <div class="col">
 	   	  <label for="date">Location</label>
-	      <input id="date" type="number" name="zipCode" class="form-control" placeholder="Zip Code...">
+	      <input id="location" type="number" name="zipCode" class="form-control" placeholder="Zip Code...">
 	    </div>
 	    <div class="col">
 	   	  <label for="rating">Minimum Rating</label>
-	      <input step=".01" id="rating" type="number" name="rating" class="form-control" placeholder="Rating...">
+	      <input id="rating" step=".01" id="rating" type="number" name="rating" class="form-control" placeholder="Rating...">
 	    </div>
 	  </div>
-	  <button type="submit" class="btn btn-primary submitButton"> Submit </button>
+	  <button id="submit" type="submit" class="btn btn-primary submitButton"> Submit </button>
 	</form>
 	
      <c:forEach items="${sitters}" var="sitter">
      		<div class="sitterResult">
-     			<a href="/Testing/Sitter?id=${sitter.ID}">
+     			<a id="sitterlink" href="/Testing/Sitter?id=${sitter.ID}">
 	         		<h1>${sitter.name}</h1>
 	         	</a>
 	         	<h3>${sitter.averageRating} / 5 Stars</h3>

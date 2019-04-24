@@ -41,7 +41,7 @@
 <%
 	if(request.getAttribute("success") != null && request.getAttribute("message") != "") {
 		%>
-			<div class="alert alert-success" role="alert">
+			<div id="reserveMessage" class="alert alert-success" role="alert">
 			  Successfully created reservation.
 			</div>
 		<%
@@ -121,7 +121,7 @@
     		<input type="text" class="form-control" placeholder="00000" >
 		</div>
 	
-		<input class="btn btn-primary" type="submit" name="submit" value="Next">
+		<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Submit">
 	</form>
 	
 	</div>

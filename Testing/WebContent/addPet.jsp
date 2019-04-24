@@ -40,7 +40,7 @@
 <%
 	if(request.getAttribute("success") != null && request.getAttribute("message") != "") {
 		%>
-			<div class="alert alert-success" role="alert">
+			<div id="added" class="alert alert-success" role="alert">
 			  Successfully added pet to your account.
 			</div>
 		<%
@@ -68,10 +68,10 @@
 	<br>
 	<form action="/Testing/AddPetPage" method="POST" style="max-width: 700px;">
 		<label for="petName">Pet Name</label>
-		<input class="form-control" id="petName" type="text" name="petName" required>
+		<input id="name" class="form-control" id="petName" type="text" name="petName" required>
 	
 		<label for="type">Pet Type</label>	
-		<input class="form-control" list="pet type" id="type" name="type">
+		<input id="type" class="form-control" list="pet type" id="type" name="type">
 		<datalist id="petType">
 		<option value="Cat"></option>
 		<option value="Dog"></option>
@@ -89,16 +89,16 @@
 		</datalist>
 	
 		<label for="breed">Breed</label>
-		<input class="form-control" id="breed" type="text" name="breed">
+		<input id="breed" class="form-control" id="breed" type="text" name="breed">
 
 		<label for="birthday">Date of Birth</label>
-		<input class="form-control" type="text" id="birthday" name="birthday">
+		<input id="dob" class="form-control" type="text" id="birthday" name="birthday">
 		
 		<label for="pounds">Weight in Pounds</label>
-		<input class="form-control" type="number" id="pounds" name="weight" step="1.0">
+		<input id="weight" class="form-control" type="number" id="pounds" name="weight" step="1.0">
 
 		<label for="color">Color</label>
-		<input class="form-control" type="text" id="color" name="color"></input>
+		<input id="color" class="form-control" type="text" id="color" name="color"></input>
 
 		<br>
 		<h4 for="spay">Spayed/Neutered?</h4>
@@ -111,10 +111,10 @@
 		<br><br>
 		
 		<h4 for="spay">Behavioral Nature and Additional Notes</h4>
-		<textarea style="margin-top: 10px;" class="form-control" name="nature" rows="3" cols="60" placeholder="Enter pet's general nature"></textarea>
+		<textarea id="nature" style="margin-top: 10px;" class="form-control" name="nature" rows="3" cols="60" placeholder="Enter pet's general nature"></textarea>
 		<br><br>
 		
-		<input class="btn btn-primary" type="submit" name="submit" value="Submit">
+		<input id="submit" class="btn btn-primary" type="submit" name="submit" value="Submit">
 	</form>
 	
 	</div>

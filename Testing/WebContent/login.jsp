@@ -34,10 +34,10 @@
 <body style="background-color: #eee">
 <%@include file="navbar.jsp" %>
 	<%
-		if(request.getAttribute("message") != null) {
+		if(request.getAttribute("createdAccount") != null) {
 			%>
-				<div class="alert alert-success" role="alert">
-				  ${request.getAttribute("message")}
+				<div id="accountCreatedAlert" class="alert alert-success" role="alert">
+				  Successfully created user account!
 				</div>
 			<%
 		}
@@ -71,8 +71,8 @@
 		  <input class="form-control" type="password" name="password" id="passwordID" placeholder="Password..." />
 	    </div>
 		<div class="form-group" style="padding-top: 20px;">
-		  <button class="btn btn-primary" type="submit" name="submit" value="login">Login</button>
-		  <button class="btn secondary" type="submit" name="submit" value="register">Register</button>
+		  <button id="loginButton" class="btn btn-primary" type="submit" name="submit" value="login">Login</button>
+		  <button id="registerButton" class="btn secondary" type="submit" name="submit" value="register">Register</button>
 		</div>
 	</form>
 	</div>

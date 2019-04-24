@@ -38,7 +38,7 @@ public class LoginController extends HttpServlet {
 		
 		String username = request.getParameter("username");
 		String pass = request.getParameter("password");
-		String name = request.getParameter("name");
+		String name = "Name";
 		String submitType = request.getParameter("submit");
 		Login login = new Login(username, pass, name);
 		Customer c = customerDao.validateCustomer(login);
@@ -57,11 +57,11 @@ public class LoginController extends HttpServlet {
 			UserManager.setCustomer(c);
 			request.getRequestDispatcher("home.jsp").forward(request, response);
 		} else if(submitType.equals("register")) {
-			c.setName(request.getParameter("name"));
+			c.setName("Name");
 			c.setUsername(request.getParameter("username"));
 			c.setPassword(request.getParameter("password"));
 			customerDao.register(c);
-			request.setAttribute("successMessage", "Registration done, please login!");
+			request.setAttribute("createdAccount", "Registration done, please login!");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 			
 		} else {
